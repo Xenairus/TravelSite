@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Modal -->
+        <div class="form-container" id="login-form">
+          <img src="/assets/img/path-to-philippine-map.png" alt="Philippine Map" class="logo">
+          <h2>Login</h2>
+          <form>
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <!-- <div class="checkbox-container">
+              <input type="checkbox" id="remember-me">
+              <label for="remember-me">Remember Me</label>
+            </div> -->
+            <button type="submit" onclick="loginAndGoHome()">Login</button>
+          </form>
+          <p>
+            Don’t have an account? <a href="/signup.html" style="text-decoration: none;">Create an account</a>
+          </p>
+        </div>
+    </div>
+
+    <script src="/assets/js/global.js"></script>
+    <script>
+        function loginAndGoHome() {
+            login(getUsername(), getPassword());
+            navigateTo('./index.html')
+        }
+    </script>
+</body>
+</html>

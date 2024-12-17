@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #95f5f0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #34c2a4;
+    width: 100%;
+    height: fit-content;
+    z-index: 1;
+}
+
+.navList {
+    width: fit-content;
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.navList a {
+    text-decoration: none;
+    color: indigo;
+    padding: 30px;
+}
+
+.navList a:hover {
+    background-color: #2eb094;
+}
+
+.navList button {
+    background-color: #34c2a4;
+    box-shadow: 2px 2px  black;
+    border: 1px solid black;
+    padding: 5px 20px 5px 20px;
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.navList button:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.logoContainer {
+    float: left;
+    background-image: url(../img/philippines.png);
+    background-size: cover;
+    width: 55px;
+    height: 70px;
+    margin: 5px;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+}
+
+.userSection {
+    position: relative;
+    cursor: pointer;
+}
+
+.profileIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}

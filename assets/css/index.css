@@ -1,0 +1,77 @@
+body{
+    overflow-x: hidden;
+}
+
+.belowNav {
+    position: absolute;
+    top: 25vh;
+    width: 100%;
+    height: fit-content;
+}
+
+.luzon img{
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    top: 10px;
+    left: 5vw;
+    transition: transform 0.3s ease;
+}
+
+.luzon img:hover {
+    transform: scale(1.1);
+}
+
+.visayas img {
+    width: 140px;
+    height: 120px;
+    position: absolute;
+    top: 22vh;
+    left: 12vw;
+    transition: transform 0.3s ease;
+}
+
+.visayas img:hover {
+    transform: scale(1.1);
+}
+
+.mindanao img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 34vh;
+    left: 11.5vw;
+    transition: transform 0.3s ease;
+}
+
+.mindanao img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    margin-top: 40vh;
+    margin-bottom: 5vh;
+    text-align: center;
+    font-family:  'Times New Roman', Times, serif;
+    font-size: 32pt;
+}
+
+.buttonContainer {
+    width: fit-content;
+    margin-left: 35vw;
+}
+
+.buttonContainer button {
+    margin-left: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: aquamarine;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 2px 2px black;
+    transition: transform 0.3s ease;
+}
+
+.buttonContainer button:hover {
+    background-color: rgb(105, 216, 179);
+    transform: scale(1.1);
+}

@@ -1,0 +1,143 @@
+.mainContainer {
+    margin: 20vh 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.filterContainer {
+    margin: 10px;
+    width: 400px;
+    height: fit-content;
+    background-color: aquamarine;
+}
+
+.filterContainer label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.filterContainer select {
+    margin: 10px 15px;
+    width: 90%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    height: 40px;
+}
+
+filterContainer select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.hotelBook {
+    transition: all 0.3s ease;
+}
+
+.hotelBook:hover {
+    box-shadow: 1px 1px 2px 2px black;
+}
+
+.hotelContainer {
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotelDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+img {
+    padding: 10px;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    color: rgb(58, 56, 56);
+    margin-left: 10vh;
+}
+
+.hotelForm {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+label {
+    margin: 10px;
+}
+
+input {
+    width: 270px;
+    margin: 10px;
+    height: 20px;
+}
+
+select {
+    height: 30px;
+    width: 200px;
+}
+
+button {
+    background-color: aquamarine;
+    padding: 5px 20px;
+    width: 30%;
+}
+
+button:hover {
+    background-color: rgb(115, 229, 191);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modalContent {
+    background-color: ivory;
+    margin: 15% auto ;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

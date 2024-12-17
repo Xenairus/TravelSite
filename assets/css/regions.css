@@ -1,0 +1,52 @@
+body {
+    overflow-x: hidden;
+}
+
+.mainContainer {
+    margin: 20vh 30px 30px 30px;
+}
+
+h1 {
+    width: 100%;
+    font-size: 48pt;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+}
+
+.regContainer {
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease;
+}
+
+.regContainer:hover {
+    box-shadow:1px 1px 2px 2px black;
+    transform: translateY(5px);
+}
+
+.text {
+    width: 45%;
+}
+
+h3 {
+    font-size: 24pt;
+    margin-bottom: 20px;
+}
+
+p {
+    color: rgb(58, 56, 56);
+    margin-left: 10px;
+    text-align: justify;
+}
+
+img {
+    border: 2px groove gold;
+    border-radius: 30px;
+    width: 50%;
+    margin: 20px;
+}

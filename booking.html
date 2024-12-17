@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/booking.css">
+
+</head>
+<body>
+
+    <nav>
+        <div class="logoContainer">
+        </div>
+
+        <div class="navList">
+            <a href="/index.html" class="active">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/regions.html">Regions</a>
+            <a href="/booking.html">Bookings</a>
+            <a href="/blog.html">Blog</a>
+
+        </div>
+    </nav>
+
+    <div class="mainContainer">
+        <div class="filterContainer">
+            <label for="regionSelect">Filter by Region:</label>
+            <select id="regionSelect" onchange="filterHotelsByRegion()">
+                <option value="all">All</option>
+                <option value="luzon">Luzon</option>
+                <option value="visayas">Visayas</option>
+                <option value="mindanao">Mindanao</option>
+            </select>
+        </div>
+
+        <div class="hotelContainer">
+            <div class="hotelBook" id="delunaHotel" data-region="all">
+                <div class="hotelDetails">
+                    <img src="/assets/img/hotel.png" alt="Hotel Logo">
+                    <h2>Hotel de Luna</h2>
+                </div>
+
+                <p>A mystical and elegant hotel blending vintage charm with modern luxury, inspired by the hit Korean drama.</p>
+
+                <div class="hotelForm">
+                    <label for="deluna">Name:</label>
+                    <input type="text" id="delunaName" placeholder="Enter your name" required>
+                    <label for="delunaDate">Booking Date:</label>
+                    <input type="date" id="delunaDate" required>
+                    <label for="delunaBed">Room:</label>
+
+                    <select class="whatbed" id="delunaBed">
+                        <option value="Queen"> With Queen-sized Bed</option>
+                        <option value="King"> With King-sized Bed</option>
+                    </select>
+
+                    <select name="count" id="delunaGuests">
+                        <option value="Solo">Solo</option>
+                        <option value="Partner">With Partner</option>
+                        <option value="Family">With Family</option>
+                    </select>
+                
+                    <button type="submit" onclick="displayBookTicket('deluna', 'Hotel de Luna')" id="button">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotelBook" id="luzonHotel" data-region="luzon">
+                <div class="hotelDetails">
+                    <img src="/assets/img/hotel.png" alt="Hotel Luzon Logo">
+                    <h2>Hotel sa Luzon</h2>
+                </div>
+                <p>A luxurious escape offering scenic views and modern amenities, inspired by the cultural heritage of Luzon.</p>
+                <div class="hotelForm">
+                    <label for="luzonName">Name:</label>
+                    <input type="text" id="luzonName" placeholder="Enter your name" required>
+                    <label for="luzonDate">Booking Date:</label>
+                    <input type="date" id="luzonDate" required>
+                    <label for="luzonBed">Room:</label>
+                    <select id="luzonBed">
+                        <option value="Queen">With Queen-sized Bed</option>
+                        <option value="King">With King-sized Bed</option>
+                    </select>
+                    <select id="luzonGuests">
+                        <option value="Solo">Solo</option>
+                        <option value="Partner">With Partner</option>
+                        <option value="Family">With Family</option>
+                    </select>
+                    <button type="submit" onclick="displayBookTicket('luzon', 'Hotel Luzon')" id="luzonButton">Book Now</button>
+                </div>
+            </div>
+
+            <div class="hotelBook" id="visayasHotel" data-region="visayas">
+                <div class="hotelDetails">
+                    <img src="/assets/img/hotel.png" alt="Hotel Visayas Logo">
+                    <h2>Hotel sa Visayas</h2>
+                </div>
+                <p>A vibrant hotel reflecting the festive spirit and beauty of Visayan traditions and landscapes.</p>
+                <div class="hotelForm">
+                    <label for="visayasName">Name:</label>
+                    <input type="text" id="visayasName" placeholder="Enter your name" required>
+                    <label for="visayasDate">Booking Date:</label>
+                    <input type="date" id="visayasDate" required>
+                    <label for="visayasBed">Room:</label>
+                    <select id="visayasBed">
+                        <option value="Queen">With Queen-sized Bed</option>
+                        <option value="King">With King-sized Bed</option>
+                    </select>
+                    <select id="visayasGuests">
+                        <option value="Solo">Solo</option>
+                        <option value="Partner">With Partner</option>
+                        <option value="Family">With Family</option>
+                    </select>
+                    <button type="submit" onclick="displayBookTicket('visayas', 'Hotel sa Visayas')" id="visayasButton">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="hotelBook" id="mindoroHotel" data-region="luzon">
+                <div class="hotelDetails">
+                    <img src="/assets/img/hotel.png" alt="Hotel Mindoro Logo">
+                    <h2>Hotel sa Mindoro</h2>
+                </div>
+                <p>A serene retreat nestled in the heart of nature, combining local charm with contemporary comfort.</p>
+                <div class="hotelForm">
+                    <label for="mindoroName">Name:</label>
+                    <input type="text" id="mindoroName" placeholder="Enter your name" required>
+                    <label for="mindoroDate">Booking Date:</label>
+                    <input type="date" id="mindoroDate" required>
+                    <label for="mindoroBed">Room:</label>
+                    <select id="mindoroBed">
+                        <option value="Queen">With Queen-sized Bed</option>
+                        <option value="King">With King-sized Bed</option>
+                    </select>
+                    <select id="mindoroGuests">
+                        <option value="Solo">Solo</option>
+                        <option value="Partner">With Partner</option>
+                        <option value="Family">With Family</option>
+                    </select>
+                    <button type="submit" onclick="displayBookTicket('mindoro', 'Hotel sa Mindoro')" id="mindoroButton">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="hotelBook" id="bicolHotel" data-region="luzon">
+                <div class="hotelDetails">
+                    <img src="/assets/img/hotel.png" alt="Hotel Bicol Logo">
+                    <h2>Hotel sa Bicol</h2>
+                </div>
+                <p>A cozy hideaway offering warm hospitality and stunning views of Mayon Volcano.</p>
+                <div class="hotelForm">
+                    <label for="bicolName">Name:</label>
+                    <input type="text" id="bicolName" placeholder="Enter your name" required>
+                    <label for="bicolDate">Booking Date:</label>
+                    <input type="date" id="bicolDate" required>
+                    <label for="bicolBed">Room:</label>
+                    <select id="bicolBed">
+                        <option value="Queen">With Queen-sized Bed</option>
+                        <option value="King">With King-sized Bed</option>
+                    </select>
+                    <select id="bicolGuests">
+                        <option value="Solo">Solo</option>
+                        <option value="Partner">With Partner</option>
+                        <option value="Family">With Family</option>
+                    </select>
+                    <button type="submit" onclick="displayBookTicket('bicol', 'Hotel sa Bicol')" id="bicolButton">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="hotelBook" id="marawiHotel" data-region="mindanao">
+
+                <div class="hotelDetails">
+            
+                    <img src="/assets/img/hotel.png" alt="Hotel Marawi Logo">
+                    <h2>Hotel sa Marawi</h2>
+            
+                </div>
+            
+                <p>A serene and modern hotel offering luxurious comfort with a touch of local Maranao culture, located in the heart of Marawi City, Lanao del Sur.</p>
+            
+                <div class="hotelForm">
+            
+                    <label for="marawi">Name:</label>
+                    <input type="text" id="marawiName" placeholder="Enter your name" required>
+                    <label for="marawiDate">Booking Date:</label>
+                    <input type="date" id="marawiDate" required>
+                    <label for="marawiBed">Room:</label>
+            
+                    <select id="marawiBed">
+                        <option value="Queen">With Queen-sized Bed</option>
+                        <option value="King">With King-sized Bed</option>
+                    </select>
+            
+                    <select name="count" id="marawiGuests">
+                        <option value="Solo">Solo</option>
+                        <option value="Partner">With Partner</option>
+                        <option value="Family">With Family</option>
+                    </select>
+            
+                    <button type="submit" onclick="displayBookTicketHotelMarawi('marawi', 'Hotel sa Marawi')" id="marawiButton">Book Now</button>
+                </div>
+            
+            </div>
+            
+
+        </div>
+        
+
+        <div id="bookingModal" class="modal">
+
+            <div class="modalContent">
+                
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 style="margin-bottom: 10px;">Booking Confirmation</h3>
+                <p id="modalContent"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="/assets/js/global.js"></script>
+</body>
+</html>

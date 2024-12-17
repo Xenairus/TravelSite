@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav>
+        <div class="logoContainer">
+        </div>
+
+        <div class="navList">
+            <a href="/index.html" class="active">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/regions.html">Regions</a>
+            <a href="/booking.html">Bookings</a>
+            <a href="/blog.html">Blog</a>
+        </div>
+    </nav>
+
+    <div class="mainContainer">
+        <div class="postContainer">
+            <div class="profileDetails">
+                <img src="/assets/img/profile1.jfif" alt="A random guy's picture">
+                <h4>Alec Gations</h4>
+            </div>
+            <p>Mt. Pinatubo is really beautiful!!</p>
+            <img src="/assets/img/pinatuboeruption.jpg" alt="A picture of the eruption of Mt. Pinatubo" class="imagePost">
+            <div class="userActions">
+                <i class="fas fa-heart" id="heart1" onclick="addReaction('heart1')"> 24</i>
+                <i class="fas fa-comment" id="comment" onclick="showComments('commentSection1')"> 0</i>
+                <a href="https://open.spotify.com/track/7c7FXtur2w9gAiK3XiD5vs"><i class="fas fa-share" id="share"> 6</i></a>
+            </div>
+
+            <div class="commentSection" id="commentSection1">
+                <div id="commentContainer1">
+                    <div class="commentProfile">
+                        <img src="/assets/img/profile-icon.jfif" alt="Profile Icon" id="profileImage">
+                        <h4 id="name"></h4>
+                    </div>
+                </div>
+                
+                <div class="addComment">
+                    <input type="text" id="commentInput1" placeholder="Add a comment..." />
+                    <button onclick="addComment('commentInput1', 'commentContainer1')">Post</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="postContainer">
+            <div class="profileDetails">
+                <img src="/assets/img/profile2.jpg" alt="A random guy's picture">
+                <h4>Rouma Numeral</h4>
+            </div>
+            <p>I paid ₱1450 to board this boat... should've swam instead</p>
+            <img src="/assets/img/triptopagsanjan.jfif" alt="Pagsanjan Falls" class="imagePost">
+            <div class="userActions">
+                <i class="fas fa-heart" id="heart2" onclick="addReaction('heart2')"> 15</i>
+                <i class="fas fa-comment" id="comment" onclick="showComments('commentSection2')"> 0</i>
+                <a href="https://open.spotify.com/track/7c7FXtur2w9gAiK3XiD5vs"><i class="fas fa-share" id="share"> 3</i></a>
+            </div>
+
+            <div class="commentSection" id="commentSection2">
+                <div id="commentContainer2">
+                    <div class="commentProfile">
+                        <img src="/assets/img/profile-icon.jfif" alt="Profile Icon" id="profileImage">
+                        <h4 id="name"></h4>
+                    </div>
+                </div>
+                
+                <div class="addComment">
+                    <input type="text" id="commentInput2" placeholder="Add a comment..." />
+                    <button onclick="addComment('commentInput2', 'commentContainer2')">Post</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="postContainer">
+            <div class="profileDetails">
+                <img src="/assets/img/profile3.jfif" alt="A random girl's picture">
+                <h4>Who Man</h4>
+            </div>
+            <p>10/10 would definitely swim here</p>
+            <img src="/assets/img/taalSwim.jfif" alt="Taal Lake" class="imagePost">
+            <div class="userActions">
+                <i class="fas fa-heart" id="heart3" onclick="addReaction('heart3')"> 150</i>
+                <i class="fas fa-comment" id="comment" onclick="showComments('commentSection3')"> 0</i>
+                <a href="https://open.spotify.com/track/7c7FXtur2w9gAiK3XiD5vs"><i class="fas fa-share" id="share"> 90</i></a>
+            </div>
+
+            <div class="commentSection" id="commentSection3">
+                <div id="commentContainer3">
+                    <div class="commentProfile">
+                        <img src="/assets/img/profile-icon.jfif" alt="Profile Icon" id="profileImage">
+                        <h4 id="name"></h4>
+                    </div>
+                </div>
+                
+                <div class="addComment">
+                    <input type="text" id="commentInput3" placeholder="Add a comment..." />
+                    <button onclick="addComment('commentInput3', 'commentContainer3')">Post</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/assets/js/global.js"></script>
+</body>
+</html>

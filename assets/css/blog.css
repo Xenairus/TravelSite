@@ -1,0 +1,91 @@
+.mainContainer {
+    width: 95vw;
+    margin: 15vh 30px 30px 30px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.postContainer {
+    background-color: ivory;
+    width: fit-content;
+    max-width: 380px;
+    border-radius: 20px;
+}
+
+.profileDetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.profileDetails img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+p {
+    font-size: 16pt;
+    margin: 20px 30px 20px 30px;
+    width: fit-content;
+}
+
+.imagePost {
+    width: 90%;
+    border: 1px solid black;
+    margin: 15px 10px 15px 10px;
+}
+
+.userActions {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid black;
+}
+
+i {
+    padding: 10px 20px 10px 20px;
+    transition: all 0.5s ease;
+    color: #000;
+    cursor: pointer;
+}
+
+i:hover {
+    color: blue;
+}
+
+i#heart1:hover, i#heart2:hover, i#heart3:hover {
+    color: red;
+}
+
+.commentSection {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.commentProfile {
+    display: none;
+}
+
+.commentSection input {
+    width: 70%;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.commentSection button {
+    width: 20%;
+    background-color: aquamarine;
+    padding: 10px 20px 10px 20px;
+}
+
+.commentSection button:hover {
+    background-color: rgb(110, 221, 184);
+}
